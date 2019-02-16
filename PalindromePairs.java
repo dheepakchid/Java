@@ -3,9 +3,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-public class Solution {
-	public static List<List<Integer>> palindromePairs(String[] words) {
-	    List<List<Integer>> res = new ArrayList<List<Integer>>();
+class PalindromePairs {
+	private static List<List<Integer>> palindromePairs(String[] words) {
+	    List<List<Integer>> res = new ArrayList<>();
 	    if(words == null || words.length == 0){
 	        return res;
 	    }
@@ -65,12 +65,12 @@ public class Solution {
 	    return res;
 	}
 
-	public static String reverseStr(String str){
+	private static String reverseStr(String str){
 	    StringBuilder sb= new StringBuilder(str);
 	    return sb.reverse().toString();
 	}
 
-	public static boolean isPalindrome(String s){
+	private static boolean isPalindrome(String s){
 	    int i = 0;
 	    int j = s.length() - 1;
 	    while(i <= j){
