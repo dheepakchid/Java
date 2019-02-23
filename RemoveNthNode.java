@@ -26,7 +26,7 @@ public class RemoveNthNode {
         }
         System.out.println();
     }
-    private static ListNode removeNthFromEnd(ListNode head, int n) {
+    private static void removeNthFromEnd(ListNode head, int n) {
         ListNode start = new ListNode(0);
         start.next = head;
         ListNode slow = start, fast = start;
@@ -40,8 +40,6 @@ public class RemoveNthNode {
             fast = fast.next;
         }
         slow.next = slow.next.next;
-
-        return start.next;
     }
 
     public static void main(String[] args) {
@@ -57,8 +55,9 @@ public class RemoveNthNode {
 
         System.out.print("Number :  ");
         list.printList(first);
+        int removePosition = 2;
 
-        removeNthFromEnd(head,2);
+        removeNthFromEnd(head,removePosition);
         list.printList(first);
     }
 }
